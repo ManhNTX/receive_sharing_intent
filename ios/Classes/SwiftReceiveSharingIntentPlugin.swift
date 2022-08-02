@@ -120,7 +120,6 @@ public class SwiftReceiveSharingIntentPlugin: NSObject, FlutterPlugin, FlutterSt
     
     private func handleUrl(url: URL?, setInitialData: Bool) -> Bool {
         if let url = url {
-            let appDomain = Bundle.main.bundleIdentifier!
             let appGroupId = (Bundle.main.object(forInfoDictionaryKey: "AppGroupId") as? String) ?? "group.\(Bundle.main.bundleIdentifier!)"
             let userDefaults = UserDefaults(suiteName: appGroupId)
             if url.fragment == "media" {
